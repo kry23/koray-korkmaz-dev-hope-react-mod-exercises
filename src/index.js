@@ -1,4 +1,4 @@
 import reactDom from "react-dom";
-import { Hello } from "./Hello";
-const helloEl = <Hello />;
-reactDom.render(helloEl, document.querySelector("#root"));
+import { App } from "./App";
+
+reactDom.render(<App />, document.querySelector("#root"));
