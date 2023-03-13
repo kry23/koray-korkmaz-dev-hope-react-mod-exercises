@@ -1,11 +1,10 @@
 import React from "react";
 class App extends React.Component {
-  state = {};
-  handleName(name) {
-    return <h1>Hello, {name}</h1>;
+  handleSum(a, b) {
+    return <h1>{a + b}</h1>;
   }
   render() {
-    return this.handleName("kry");
+    return this.handleSum(1, 2);
   }
 }
 
