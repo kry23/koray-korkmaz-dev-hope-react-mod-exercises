@@ -20,7 +20,7 @@ export default function UncontrolledLogin() {
 
     nameInputRef.current.addEventListener("input", checkInputs);
     passwordInputRef.current.addEventListener("input", checkInputs);
-
+    nameInputRef.current.focus();
     return () => {
       nameInputRef.current.removeEventListener("input", checkInputs);
       passwordInputRef.current.removeEventListener("input", checkInputs);
