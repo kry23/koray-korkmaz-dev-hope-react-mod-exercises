@@ -13,10 +13,11 @@ export class Welcome extends React.Component {
     if (age >= 18 && age < 65) {
       ageComponent = <Age age={age}></Age>;
     }
+    console.log(this.props.name);
 
     return (
       <>
-        <p>Welcome, {this.props.name}!</p>
+        {this.props.name === "John" && <p>Welcome, {this.props.name}!</p>}
         {ageComponent}
       </>
     );
