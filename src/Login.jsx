@@ -16,7 +16,7 @@ export default function Login({ handleSubmit }) {
 
   return (
     <div className="login-container">
-      <form className="login-form" onSubmit={handleSubmit}>
+      <form className="login-form">
         <input onChange={handleUserName} type="text" value={name} />
         <input onChange={handlePassword} type="password" value={password} />
         <label htmlFor="remember">
@@ -29,7 +29,10 @@ export default function Login({ handleSubmit }) {
           Remember
         </label>
         <button
-          onClick={handleSubmit}
+          onClick={() => {
+            // eslint-disable-next-line no-restricted-globals
+            handleSubmit(name, password, event);
+          }}
           type="submit"
           disabled={name === "" || password === "" ? true : false}
         >

@@ -10,9 +10,9 @@ export class App extends React.Component {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleSubmit(event) {
+  handleSubmit(name, password, event) {
     event.preventDefault();
-    console.log("lkogin");
+    console.log(name, password);
   }
   render() {
     return (
