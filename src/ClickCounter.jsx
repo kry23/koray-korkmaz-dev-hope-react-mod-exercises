@@ -16,11 +16,11 @@ class ClickCounter extends React.Component {
   }
   render() {
     return (
-      <>
+      <div style={{ display: "block", marginBottom: 30 }}>
         <button onClick={this.handleInc}>+</button>
         <span>{this.state.count}</span>
         <button onClick={this.handleDesc}>-</button>
-      </>
+      </div>
     );
   }
 }
