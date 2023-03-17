@@ -1,6 +1,7 @@
 import React from "react";
 import Age from "./Age";
-import Counter from "./Counter";
+import ClickCounter from "./ClickCounter";
+// import Counter from "./Counter";
 export class Welcome extends React.Component {
   static defaultProps = {
     name: "John",
@@ -19,7 +20,8 @@ export class Welcome extends React.Component {
       <>
         {this.props.name === "John" && <p>Welcome, {this.props.name}!</p>}
         <Age age={age}></Age>
-        <Counter initVal={11} incInt={1000} incVal={3}></Counter>
+        {/* <Counter initVal={11} incInt={1000} incVal={3}></Counter> */}
+        <ClickCounter />
       </>
     );
   }
