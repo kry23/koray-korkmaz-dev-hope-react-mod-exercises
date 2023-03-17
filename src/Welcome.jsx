@@ -1,8 +1,9 @@
 import React from "react";
 export class Welcome extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  static defaultProps = {
+    name: "John",
+  };
+
   state = {};
   render() {
     return <p>Welcome, {this.props.name}!</p>;
