@@ -19,7 +19,7 @@ export class Welcome extends React.Component {
       <>
         {this.props.name === "John" && <p>Welcome, {this.props.name}!</p>}
         <Age age={age}></Age>
-        <Counter></Counter>
+        <Counter initVal={11} incInt={3000} incVal={3}></Counter>
       </>
     );
   }

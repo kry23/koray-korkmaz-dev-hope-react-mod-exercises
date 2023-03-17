@@ -9,14 +9,21 @@ class Counter extends React.Component {
     this.handleIncrement = this.handleIncrement.bind(this);
   }
   componentDidMount() {
-    this.intervalId = setInterval(this.handleIncrement, 1000);
+    if (this.props.initVal) {
+      this.setState({
+        count: this.props.initVal,
+      });
+    }
+    this.intervalId = setInterval(this.handleIncrement, this.props.incInt);
   }
 
   componentWillUnmount() {
     clearInterval(this.intervalId);
   }
   handleIncrement() {
-    this.setState((prevState) => ({ count: prevState.count + 1 }));
+    this.setState((prevState) => ({
+      count: prevState.count + this.props.incVal,
+    }));
   }
 
   render() {
