@@ -16,3 +16,20 @@ body {
 .buttons-tracker button:hover {
   opacity: 0.7;
 }
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  margin-bottom: 10px;
+}
+.login-form input[type="checkbox"] {
+  align-self: start;
+}
