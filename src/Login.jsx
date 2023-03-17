@@ -13,6 +13,11 @@ export default function Login({ handleSubmit }) {
   const handleRemember = (event) => {
     setRemember(event.target.checked);
   };
+  const handleReset = () => {
+    setName("");
+    setPassword("");
+    setRemember(false);
+  };
 
   return (
     <div className="login-container">
@@ -35,6 +40,7 @@ export default function Login({ handleSubmit }) {
         >
           Send
         </button>
+        <button onClick={handleReset}>Reset</button>
       </form>
     </div>
   );
