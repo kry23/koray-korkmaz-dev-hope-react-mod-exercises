@@ -35,5 +35,6 @@ class Counter extends React.Component {
 export default Counter;
 /*
 Can we do this without component cycle methods ?
+I learn it, It could be in constructor but its too late for that now :)
 */
 /*State-2 branch is actualy state -3  */
