@@ -35,3 +35,4 @@ export default Counter;
 /*
 Can we do this without component cycle methods ?
 */
+/*State-2 branch is actualy state -3  */
