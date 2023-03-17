@@ -7,10 +7,13 @@ export class Welcome extends React.Component {
 
   state = {};
   render() {
-    const age = 5;
+    let age;
     let ageComponent = null;
 
     if (age >= 18) {
+      ageComponent = <Age age={age}></Age>;
+    }
+    if (age) {
       ageComponent = <Age age={age}></Age>;
     }
     return (
