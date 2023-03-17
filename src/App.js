@@ -5,6 +5,7 @@ import "./basic.css";
 import { Welcome } from "./Welcome";
 import InteractiveWelcome from "./InteractiveWelcome";
 import Login from "./Login";
+import UncontrolledLogin from "./UncontrolledLogin";
 export class App extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +21,8 @@ export class App extends React.Component {
         {/* <Hello></Hello>
         <Message></Message>
         <InteractiveWelcome /> */}
-        <Login handleSubmit={this.handleSubmit} />
+        {/* <Login handleSubmit={this.handleSubmit} /> */}
+        <UncontrolledLogin />
       </div>
     );
   }
