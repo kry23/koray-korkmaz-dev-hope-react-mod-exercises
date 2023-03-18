@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Hello } from "./Hello";
 import { Message } from "./Message";
-import "./basic.css";
+
 import { Welcome } from "./Welcome";
 import InteractiveWelcome from "./InteractiveWelcome";
 import Login from "./Login";
@@ -10,6 +10,7 @@ import Container from "./Container";
 import DisplayLanguage from "./DisplayLanguage";
 import LanguageContext from "./LanguageContext";
 import Sum from "./Sum";
+import "./basic.css";
 function App() {
   const [language, setLanguage] = useState("en");
   const handleLanguage = (e) => {
