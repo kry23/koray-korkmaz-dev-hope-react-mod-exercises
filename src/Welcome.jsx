@@ -19,7 +19,7 @@ export class Welcome extends React.Component {
 
     return (
       <div className="welcome">
-        <p>Welcome, {this.props.name}!</p>
+        <p className="text-2xl font-bold">Welcome, {this.props.name}!</p>
         <Age age={age}></Age>
         {/* <Counter initVal={11} incInt={1000} incVal={3}></Counter> */}
         {/* <ClickCounter />
