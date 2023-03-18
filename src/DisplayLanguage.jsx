@@ -15,7 +15,7 @@ function DisplayLanguage() {
   return (
     <div>
       <LanguageContext.Consumer>
-        {(language) => Strings[language].current + " Koray"}
+        {(language) => <h1>{language}</h1>}
       </LanguageContext.Consumer>
     </div>
   );
