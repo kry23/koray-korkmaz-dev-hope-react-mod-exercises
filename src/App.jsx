@@ -16,15 +16,22 @@ import GithubUserList from "./GithubUserList";
 import HookClickCounter from "./HookClickCounter";
 import UserForm from "./UserForm";
 import HookGithubUser from "./HookGithubUser";
+import CarDetails from "./CarDetails";
 function App() {
   const [language, setLanguage] = useState("en");
   const handleLanguage = (e) => {
     setLanguage(e.target.value);
   };
   const numbers = [12, 13, 14, 15];
+  const initialdata = {
+    model: "fiat",
+    year: 1905,
+    color: "yeloow",
+  };
   return (
     <div>
-      <HookGithubUser username={"kry23"} />
+      <CarDetails initialdata={initialdata} />
+      {/* <HookGithubUser username={"kry23"} /> */}
       {/* <UserForm /> */}
       {/* <HookClickCounter /> */}
       {/* <Welcome name="koray" /> */}
