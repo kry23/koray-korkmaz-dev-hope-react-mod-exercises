@@ -13,6 +13,10 @@ function TodoList({ todos }) {
     setInputVal("");
   };
 
+  const clearList = () => {
+    setItems([]);
+  };
+
   return (
     <>
       <ul>
@@ -22,6 +26,7 @@ function TodoList({ todos }) {
       </ul>
       <input type="text" id="input" value={inputVal} onChange={handleInput} />
       <button onClick={addToList}>Send</button>
+      <button onClick={clearList}>Reset</button>
     </>
   );
 }
