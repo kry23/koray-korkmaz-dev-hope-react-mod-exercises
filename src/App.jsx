@@ -13,6 +13,7 @@ import Sum from "./Sum";
 import "./basic.css";
 import GithubUser from "./GithubUser";
 import GithubUserList from "./GithubUserList";
+import HookClickCounter from "./HookClickCounter";
 function App() {
   const [language, setLanguage] = useState("en");
   const handleLanguage = (e) => {
@@ -21,8 +22,9 @@ function App() {
   const numbers = [12, 13, 14, 15];
   return (
     <div>
+      <HookClickCounter />
       {/* <Welcome name="koray" /> */}
-      <GithubUserList />
+      {/* <GithubUserList /> */}
       {/* <Sum /> */}
       {/*  <Hello></Hello>
     <Message></Message> */}
