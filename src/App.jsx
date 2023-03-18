@@ -12,6 +12,7 @@ import LanguageContext from "./LanguageContext";
 import Sum from "./Sum";
 import "./basic.css";
 import GithubUser from "./GithubUser";
+import GithubUserList from "./GithubUserList";
 function App() {
   const [language, setLanguage] = useState("en");
   const handleLanguage = (e) => {
@@ -21,7 +22,7 @@ function App() {
   return (
     <div>
       {/* <Welcome name="koray" /> */}
-      <GithubUser username={"kry23"} />
+      <GithubUserList />
       {/* <Sum /> */}
       {/*  <Hello></Hello>
     <Message></Message> */}
