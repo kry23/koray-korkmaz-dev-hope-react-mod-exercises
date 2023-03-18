@@ -1,7 +1,7 @@
 import React from "react";
 import useGithubUser from "./useGithubUser";
 
-const GithubUser = ({ username }) => {
+const HookGithubUser = ({ username }) => {
   const { user, isLoading } = useGithubUser(username);
 
   if (isLoading) {
@@ -18,4 +18,4 @@ const GithubUser = ({ username }) => {
   }
 };
 
-export default GithubUser;
+export default HookGithubUser;
