@@ -35,6 +35,7 @@ export default function Login({ handleSubmit }) {
           }}
           type="submit"
           disabled={name === "" || password === "" ? true : false}
+          style={{ backgroundColor: password.length > 7 ? "green" : "red" }}
         >
           Send
         </button>

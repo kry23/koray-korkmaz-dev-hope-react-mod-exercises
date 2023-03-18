@@ -18,12 +18,12 @@ export class App extends React.Component {
   render() {
     return (
       <div>
-        <Welcome />
-        {/* <Hello></Hello>
-        <Message></Message>
-        <InteractiveWelcome /> *
-        {/* <Login handleSubmit={this.handleSubmit} /> */}
-        <TodoList />
+        {/* <Welcome />
+        <Hello></Hello>
+        <Message></Message> */}
+        {/* <InteractiveWelcome /> */}
+        <Login handleSubmit={this.handleSubmit} />
+        {/* <TodoList /> */}
       </div>
     );
   }
