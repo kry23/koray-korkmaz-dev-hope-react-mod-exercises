@@ -17,11 +17,23 @@ function TodoList({ todos }) {
     setItems([]);
   };
 
+  const removeItem = (it) => {
+    setItems(items.filter((item, index) => index !== it));
+  };
+
   return (
     <>
       <ul>
-        {items.map((item) => (
-          <li key={item}>{item}</li>
+        {items.map((item, index) => (
+          <li key={index}>
+            {item}
+            <button
+              onClick={() => removeItem(index)}
+              style={{ marginLeft: "20px" }}
+            >
+              Remove
+            </button>
+          </li>
         ))}
       </ul>
       <input type="text" id="input" value={inputVal} onChange={handleInput} />
