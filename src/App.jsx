@@ -9,14 +9,17 @@ import TodoList from "./TodoList";
 import Container from "./Container";
 import DisplayLanguage from "./DisplayLanguage";
 import LanguageContext from "./LanguageContext";
+import Sum from "./Sum";
 function App() {
   const [language, setLanguage] = useState("en");
   const handleLanguage = (e) => {
     setLanguage(e.target.value);
   };
+  const numbers = [12, 13, 14, 15];
   return (
     <div>
-      {/* <Welcome /> */}
+      <Welcome name="koray" />
+      <Sum numbers={numbers} />
       {/*  <Hello></Hello>
     <Message></Message> */}
       {/* <InteractiveWelcome /> */}
@@ -38,14 +41,14 @@ function App() {
         });
       }}
     ></TodoList> */}
-      <select value={language} onChange={handleLanguage}>
+      {/* <select value={language} onChange={handleLanguage}>
         <option value="en">EN</option>
         <option value="tr">TR</option>
         <option value="it">IT</option>
       </select>
       <LanguageContext.Provider value={language}>
         <DisplayLanguage />
-      </LanguageContext.Provider>
+      </LanguageContext.Provider> */}
       {/* <Container title={"where is my mind ?"} /> */}
     </div>
   );
