@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GithubUser from "./GithubUser";
 
 function GithubUserList() {
@@ -7,7 +7,9 @@ function GithubUserList() {
   const handleChange = (e) => {
     setInput(e.target.value);
   };
-
+  useEffect(() => {
+    console.log(`list of users ${users}`);
+  }, [users]);
   const addUser = () => {
     setUsers(() => {
       return [...users, input];
