@@ -20,7 +20,7 @@ function App() {
   return (
     <div>
       <Welcome name="koray" />
-      <Sum />
+      {/* <Sum /> */}
       {/*  <Hello></Hello>
     <Message></Message> */}
       {/* <InteractiveWelcome /> */}
