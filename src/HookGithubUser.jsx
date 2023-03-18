@@ -1,21 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useGithubUser from "./useGithubUser";
 
-const GithubUser = ({ username }) => {
-  const { user, isLoading } = useGithubUser(username);
+const HookGithubUser = ({ username }) => {
+  const { user, isLoading, isError, fetchUserData } = useGithubUser();
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  useEffect(() => {
+    fetchUserData(username);
+  }, []);
 
-  if (user) {
-    return (
-      <div>
-        <img src={user.avatar_url} alt={user.login} width="50" />
-        <h2>{user.login}</h2>
-      </div>
-    );
-  }
+  return (
+    <div>
+      {isLoading && <div>Loading...</div>}
+      {isError && <div>Error: {isError.message}</div>}
+      {user && (
+        <div>
+          <img src={user.avatar_url} alt={user.login} width="50" />
+          <h2>{user.login}</h2>
+        </div>
+      )}
+    </div>
+  );
 };
 
-export default GithubUser;
+export default HookGithubUser;
