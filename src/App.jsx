@@ -15,6 +15,7 @@ import GithubUser from "./GithubUser";
 import GithubUserList from "./GithubUserList";
 import HookClickCounter from "./HookClickCounter";
 import UserForm from "./UserForm";
+import HookGithubUser from "./HookGithubUser";
 function App() {
   const [language, setLanguage] = useState("en");
   const handleLanguage = (e) => {
@@ -23,7 +24,8 @@ function App() {
   const numbers = [12, 13, 14, 15];
   return (
     <div>
-      <UserForm />
+      <HookGithubUser username={"kry23"} />
+      {/* <UserForm /> */}
       {/* <HookClickCounter /> */}
       {/* <Welcome name="koray" /> */}
       {/* <GithubUserList /> */}
