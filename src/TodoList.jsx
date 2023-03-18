@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function TodoList({ todos }) {
+function TodoList({ render }) {
   const [items, setItems] = useState(["123", "asdad", "dasd"]);
   const [inputVal, setInputVal] = useState("");
 
@@ -23,22 +23,28 @@ function TodoList({ todos }) {
 
   return (
     <>
-      <ul>
-        {items.map((item, index) => (
-          <li key={index}>
-            {item}
-            <button
-              onClick={() => removeItem(index)}
-              style={{ marginLeft: "20px" }}
-            >
-              Remove
-            </button>
-          </li>
-        ))}
-      </ul>
-      <input type="text" id="input" value={inputVal} onChange={handleInput} />
-      <button onClick={addToList}>Send</button>
-      <button onClick={clearList}>Reset</button>
+      <ul>{render(items, removeItem)}</ul>
+      <div className="flex flex-col w-40 space-y-2">
+        <input
+          type="text"
+          id="input"
+          value={inputVal}
+          className="grow-0"
+          onChange={handleInput}
+        />
+        <button
+          className="bg-green-300 text-white p-1 rounded-md grow-0"
+          onClick={addToList}
+        >
+          Send
+        </button>
+        <button
+          className=" grow-0 bg-red-300 text-white  p-1 rounded-md "
+          onClick={clearList}
+        >
+          Reset
+        </button>
+      </div>
     </>
   );
 }

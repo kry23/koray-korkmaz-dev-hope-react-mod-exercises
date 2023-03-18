@@ -24,8 +24,24 @@ export class App extends React.Component {
         <Message></Message> */}
         {/* <InteractiveWelcome /> */}
         {/* <Login handleSubmit={this.handleSubmit} /> */}
-        {/* <TodoList /> */}
-        <Container title={"where is my mind ?"} />
+        <TodoList
+          render={(items, removeItem) => {
+            return items.map((item, index) => {
+              return (
+                <li key={index}>
+                  {item}
+                  <button
+                    className="bg-red-200 rounded-md p-2 ml-2"
+                    onClick={() => removeItem(index)}
+                  >
+                    Remove
+                  </button>
+                </li>
+              );
+            });
+          }}
+        ></TodoList>
+        {/* <Container title={"where is my mind ?"} /> */}
       </div>
     );
   }
