@@ -1,0 +1,6 @@
+.welcome {
+  background: linear-gradient(rgb(17, 24, 39), rgb(75, 85, 99));
+  border: 5px solid rgb(177, 0, 0);
+  border-radius: 4px;
+  color: white;
+}
