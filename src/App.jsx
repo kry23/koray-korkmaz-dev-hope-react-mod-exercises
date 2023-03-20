@@ -18,6 +18,8 @@ import UserForm from "./UserForm";
 import HookGithubUser from "./HookGithubUser";
 import CarDetails from "./CarDetails";
 import FillteredList from "./FillteredList";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import ClickCounter from "./ClickCounter";
 function App() {
   const [language, setLanguage] = useState("en");
   const handleLanguage = (e) => {
@@ -29,7 +31,10 @@ function App() {
     year: 1905,
     color: "yeloow",
   };
-
+  const navigate = useNavigate();
+  const navi = () => {
+    navigate("/hello");
+  };
   const list = [
     {
       id: 1,
@@ -59,44 +64,10 @@ function App() {
   ];
   return (
     <div>
-      {/* <CarDetails initialdata={initialdata} /> */}
-      {/* <HookGithubUser username={"kry23"} /> */}
-      {/* <UserForm /> */}
-      {/* <HookClickCounter /> */}
-      <FillteredList list={list} />
-      {/* <Welcome name="koray" /> */}
-      {/* <GithubUserList /> */}
-      {/* <Sum /> */}
-      {/*  <Hello></Hello>
-    <Message></Message> */}
-      {/* <InteractiveWelcome /> */}
-      {/* <Login handleSubmit={this.handleSubmit} /> */}
-      {/* <TodoList
-      render={(items, removeItem) => {
-        return items.map((item, index) => {
-          return (
-            <li key={index}>
-              {item}
-              <button
-                className="bg-red-200 rounded-md p-2 ml-2"
-                onClick={() => removeItem(index)}
-              >
-                Remove
-              </button>
-            </li>
-          );
-        });
-      }}
-    ></TodoList> */}
-      {/* <select value={language} onChange={handleLanguage}>
-        <option value="en">EN</option>
-        <option value="tr">TR</option>
-        <option value="it">IT</option>
-      </select>
-      <LanguageContext.Provider value={language}>
-        <DisplayLanguage />
-      </LanguageContext.Provider> */}
-      {/* <Container title={"where is my mind ?"} /> */}
+      <Routes>
+        <Route path="/" element={<Welcome name={"koray"} />} />
+      </Routes>
+      <button onClick={navi}>GO</button>
     </div>
   );
 }
