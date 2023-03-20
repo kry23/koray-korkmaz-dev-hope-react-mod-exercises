@@ -66,6 +66,15 @@ function App() {
         />
         <Route path="users/:username" element={<GithubUser />} />
       </Routes>
+      <Link to="/" className="mx-3">
+        Home
+      </Link>
+      <Link to="/counter" className="mx-3">
+        Counter
+      </Link>
+      <Link to="/users/kry23" className="mx-3">
+        User
+      </Link>
       {/* <button onClick={navi}>GO</button> */}
     </div>
   );
