@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-function GithubUser() {
+function GithubUser({ username }) {
   const [data, setData] = useState(null);
-  const { username } = useParams();
+
   useEffect(() => {
     fetch(`https://api.github.com/users/${username}`)
       .then((response) => {

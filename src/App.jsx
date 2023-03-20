@@ -65,10 +65,13 @@ function App() {
           path="/counter"
           element={<Counter initVal={11} incInt={1000} incVal={3}></Counter>}
         />
-        <Route path="users/:username" element={<GithubUser />} />
+
+        <Route path="/users" element={<GithubUserList />}>
+          <Route path=":id" element={<GithubUser />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Link to="/" className="mx-3">
+      {/* <Link to="/" className="mx-3">
         Home
       </Link>
       <Link to="/counter" className="mx-3">
@@ -76,7 +79,7 @@ function App() {
       </Link>
       <Link to="/users/kry23" className="mx-3">
         User
-      </Link>
+      </Link> */}
       {/* <button onClick={navi}>GO</button> */}
     </div>
   );

@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import GithubUser from "./GithubUser";
+import ShowGithubUser from "./ShowGithubUser";
 
 function GithubUserList() {
   const [users, setUsers] = useState(["kry23", "KaramGuliyev"]);
   const [input, setInput] = useState("");
+  const { userParam } = useParams();
   const handleChange = (e) => {
     setInput(e.target.value);
   };
@@ -30,11 +33,19 @@ function GithubUserList() {
       >
         Send
       </button>
+
       {users.map((user) => {
-        return <GithubUser key={user} username={user} />;
+        return (
+          <Link to={user}>
+            <ShowGithubUser user={user} />
+          </Link>
+        );
       })}
     </div>
   );
 }
 
 export default GithubUserList;
+{
+  /* <GithubUser key={user} username={user} />; */
+}
