@@ -64,6 +64,7 @@ function App() {
           path="/counter"
           element={<Counter initVal={11} incInt={1000} incVal={3}></Counter>}
         />
+        <Route path="users/:username" element={<GithubUser />} />
       </Routes>
       {/* <button onClick={navi}>GO</button> */}
     </div>
