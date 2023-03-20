@@ -21,6 +21,7 @@ import FillteredList from "./FillteredList";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import ClickCounter from "./ClickCounter";
 import Counter from "./Counter";
+import NotFound from "./NotFound";
 function App() {
   const [language, setLanguage] = useState("en");
   const handleLanguage = (e) => {
@@ -65,6 +66,7 @@ function App() {
           element={<Counter initVal={11} incInt={1000} incVal={3}></Counter>}
         />
         <Route path="users/:username" element={<GithubUser />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Link to="/" className="mx-3">
         Home
