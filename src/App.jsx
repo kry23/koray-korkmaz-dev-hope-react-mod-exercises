@@ -20,20 +20,14 @@ import CarDetails from "./CarDetails";
 import FillteredList from "./FillteredList";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import ClickCounter from "./ClickCounter";
+import Counter from "./Counter";
 function App() {
   const [language, setLanguage] = useState("en");
   const handleLanguage = (e) => {
     setLanguage(e.target.value);
   };
-  const numbers = [12, 13, 14, 15];
-  const initialdata = {
-    model: "fiat",
-    year: 1905,
-    color: "yeloow",
-  };
-  const navigate = useNavigate();
-  const navi = () => {
-    navigate("/hello");
+  const handleCounterChange = (count) => {
+    console.log("counter value changed to ", count);
   };
   const list = [
     {
@@ -66,8 +60,12 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Welcome name={"koray"} />} />
+        <Route
+          path="/counter"
+          element={<Counter initVal={11} incInt={1000} incVal={3}></Counter>}
+        />
       </Routes>
-      <button onClick={navi}>GO</button>
+      {/* <button onClick={navi}>GO</button> */}
     </div>
   );
 }
