@@ -66,7 +66,8 @@ function App() {
           element={<Counter initVal={11} incInt={1000} incVal={3}></Counter>}
         />
 
-        <Route path="/users" element={<GithubUserList />}>
+        <Route path="users" element={<GithubUserList />}>
+          <Route index element={<p>Add a user and select it</p>} />
           <Route path=":id" element={<GithubUser />} />
         </Route>
         <Route path="*" element={<NotFound />} />

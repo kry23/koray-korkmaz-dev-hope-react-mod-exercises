@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 import GithubUser from "./GithubUser";
 import ShowGithubUser from "./ShowGithubUser";
 
@@ -34,13 +34,20 @@ function GithubUserList() {
         Send
       </button>
 
-      {users.map((user) => {
-        return (
-          <Link to={user}>
-            <ShowGithubUser user={user} />
-          </Link>
-        );
-      })}
+      <ul>
+        {users.map((user) => {
+          return (
+            <li>
+              <Link to={`/users/${user}`}>
+                <GithubUser key={user} username={user} />
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+      <hr />
+      <Outlet />
+      <hr />
     </div>
   );
 }
