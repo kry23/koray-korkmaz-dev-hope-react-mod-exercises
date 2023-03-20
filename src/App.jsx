@@ -17,6 +17,7 @@ import HookClickCounter from "./HookClickCounter";
 import UserForm from "./UserForm";
 import HookGithubUser from "./HookGithubUser";
 import CarDetails from "./CarDetails";
+import FillteredList from "./FillteredList";
 function App() {
   const [language, setLanguage] = useState("en");
   const handleLanguage = (e) => {
@@ -28,12 +29,41 @@ function App() {
     year: 1905,
     color: "yeloow",
   };
+
+  const list = [
+    {
+      id: 1,
+      name: "kry",
+      age: 35,
+    },
+    {
+      id: 2,
+      name: "koray",
+      age: 23,
+    },
+    {
+      id: 3,
+      name: "koko",
+      age: 44,
+    },
+    {
+      id: 4,
+      name: "kokrk",
+      age: 17,
+    },
+    {
+      id: 5,
+      name: "kokrk",
+      age: 17,
+    },
+  ];
   return (
     <div>
       {/* <CarDetails initialdata={initialdata} /> */}
       {/* <HookGithubUser username={"kry23"} /> */}
       {/* <UserForm /> */}
-      <HookClickCounter />
+      {/* <HookClickCounter /> */}
+      <FillteredList list={list} />
       {/* <Welcome name="koray" /> */}
       {/* <GithubUserList /> */}
       {/* <Sum /> */}
@@ -58,14 +88,14 @@ function App() {
         });
       }}
     ></TodoList> */}
-      <select value={language} onChange={handleLanguage}>
+      {/* <select value={language} onChange={handleLanguage}>
         <option value="en">EN</option>
         <option value="tr">TR</option>
         <option value="it">IT</option>
       </select>
       <LanguageContext.Provider value={language}>
         <DisplayLanguage />
-      </LanguageContext.Provider>
+      </LanguageContext.Provider> */}
       {/* <Container title={"where is my mind ?"} /> */}
     </div>
   );
