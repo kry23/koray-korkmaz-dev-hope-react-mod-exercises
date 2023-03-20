@@ -30,7 +30,7 @@ function App() {
   };
   return (
     <div>
-      <CarDetails initialdata={initialdata} />
+      {/* <CarDetails initialdata={initialdata} /> */}
       {/* <HookGithubUser username={"kry23"} /> */}
       {/* <UserForm /> */}
       {/* <HookClickCounter /> */}
@@ -58,14 +58,14 @@ function App() {
         });
       }}
     ></TodoList> */}
-      {/* <select value={language} onChange={handleLanguage}>
+      <select value={language} onChange={handleLanguage}>
         <option value="en">EN</option>
         <option value="tr">TR</option>
         <option value="it">IT</option>
       </select>
       <LanguageContext.Provider value={language}>
         <DisplayLanguage />
-      </LanguageContext.Provider> */}
+      </LanguageContext.Provider>
       {/* <Container title={"where is my mind ?"} /> */}
     </div>
   );

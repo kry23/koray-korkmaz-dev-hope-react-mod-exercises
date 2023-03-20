@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import LanguageContext from "./LanguageContext";
 const Strings = {
   en: {
@@ -12,11 +12,10 @@ const Strings = {
   },
 };
 function DisplayLanguage() {
+  const language = useContext(LanguageContext);
   return (
     <div>
-      <LanguageContext.Consumer>
-        {(language) => <h1>{language}</h1>}
-      </LanguageContext.Consumer>
+      <h1>{language}</h1>
     </div>
   );
 }
