@@ -33,7 +33,7 @@ function App() {
       {/* <CarDetails initialdata={initialdata} /> */}
       {/* <HookGithubUser username={"kry23"} /> */}
       {/* <UserForm /> */}
-      {/* <HookClickCounter /> */}
+      <HookClickCounter />
       {/* <Welcome name="koray" /> */}
       {/* <GithubUserList /> */}
       {/* <Sum /> */}

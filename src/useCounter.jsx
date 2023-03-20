@@ -1,17 +1,20 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 export function useCounter(initialValue = 0) {
   const [count, setCount] = useState(0);
 
-  const handleDesc = () => {
+  const handleDesc = useCallback(function handleDesc() {
     setCount((count) => count - 1);
-  };
-  const handleInc = () => {
+  }, []);
+  const handleInc = useCallback(function handleInc() {
     setCount((count) => count + 1);
-  };
-  const handleReset = () => {
-    setCount(initialValue);
-  };
+  }, []);
+  const handleReset = useCallback(
+    function handleReset() {
+      setCount(initialValue);
+    },
+    [initialValue]
+  );
 
   return {
     count: count,
