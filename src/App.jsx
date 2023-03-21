@@ -59,19 +59,7 @@ function App() {
   ];
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Welcome name={"koray"} />} />
-        <Route
-          path="/counter"
-          element={<Counter initVal={11} incInt={1000} incVal={3}></Counter>}
-        />
-
-        <Route path="users" element={<GithubUserList />}>
-          <Route index element={<p>Add a user and select it</p>} />
-          <Route path=":id" element={<GithubUser />} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <HookGithubUser username={"kry23"} />
       {/* <Link to="/" className="mx-3">
         Home
       </Link>
