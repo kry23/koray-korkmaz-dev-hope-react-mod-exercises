@@ -59,7 +59,7 @@ function App() {
   ];
   return (
     <div>
-      <HookGithubUser username={"kry23"} />
+      <HookGithubUser username={"KaramGuliyev"} />
       {/* <Link to="/" className="mx-3">
         Home
       </Link>

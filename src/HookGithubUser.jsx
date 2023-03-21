@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import useGithubUser from "./useGithubUser";
 
 const HookGithubUser = ({ username }) => {
-  const { user, error, loading, onFetchuser } = useGithubUser(username);
+  const { user, error, loading, onFetchuser, refetch } =
+    useGithubUser(username);
+
+  useEffect(() => {
+    refetch(username);
+  }, [username]);
 
   return (
     <div>

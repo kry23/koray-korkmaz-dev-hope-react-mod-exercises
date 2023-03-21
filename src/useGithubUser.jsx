@@ -43,6 +43,9 @@ const useGithubUser = (username) => {
   const fetchGithubUser = () => {
     mutate();
   };
+  const refetch = async () => {
+    await mutate(undefined, true);
+  };
   if (!username) return error;
 
   return {
@@ -50,6 +53,7 @@ const useGithubUser = (username) => {
     error,
     loading: !data && !error,
     onFetchuser: fetchGithubUser,
+    refetch,
   };
 };
 
