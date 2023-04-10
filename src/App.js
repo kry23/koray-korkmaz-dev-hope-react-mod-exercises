@@ -25,7 +25,10 @@ export class App extends React.Component {
         {/* <InteractiveWelcome /> */}
         {/* <Login handleSubmit={this.handleSubmit} /> */}
         {/* <TodoList /> */}
-        <Container />
+        <Container >
+          <h1>Where is my mind ?</h1>
+          <p>Where is my mind ?</p>
+        </Container>
       </div>
     );
   }
